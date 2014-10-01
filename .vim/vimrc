@@ -75,7 +75,8 @@ set laststatus=2
 " gvim
 if has("gui_running")
     if has("gui_gtk2")
-        set guifont=Terminus\ 16
+        set guifont=Source\ Code\ Pro\ 14
+        "set guifont=Terminus\ 16
     endif
 endif
 
