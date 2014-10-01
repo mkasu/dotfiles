@@ -14,6 +14,7 @@ flags = [
 '-x',
 'c++',
 '-I',
+'.',
 ]
 
 compilation_database_folder = ''

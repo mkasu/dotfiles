@@ -13,6 +13,8 @@ Bundle 'scrooloose/syntastic'
 
 Bundle 'scrooloose/nerdtree'
 
+Bundle 'scrooloose/nerdcommenter'
+
 Bundle 'Valloric/YouCompleteMe'
     let g:ycm_extra_conf_globlist = ['~/.ycm_extra_conf.py']
     let g:ycm_key_list_select_completion = ['<C-n>']
@@ -21,6 +23,14 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'michalbachowski/vim-wombat256mod'
 
 Bundle 'bling/vim-airline'
+
+Bundle 'kien/ctrlp.vim'
+    let g:ctrlp_map = '<c-p>'
+    let g:ctrlp_cmd = 'CtrlP'
+    let g:ctrlp_working_path_mode = 'ra'
+
+Bundle 'spf13/vim-autoclose'
+    let g:autoclose_vim_commentmode = 1
 
 " Other options
 filetype plugin indent on
@@ -59,6 +69,15 @@ set mouse=a
 set completeopt=menu,menuone,longest
 set tabpagemax=99999
 set notimeout
+set cursorline
+set laststatus=2
+
+" gvim
+if has("gui_running")
+    if has("gui_gtk2")
+        set guifont=Terminus\ 16
+    endif
+endif
 
 " Maps
 map <leader>n :NERDTreeToggle<ENTER>
